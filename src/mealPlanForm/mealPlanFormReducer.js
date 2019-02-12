@@ -1,7 +1,7 @@
 
 const initialState = {
     mealPlan: 'OPEN_ACCESS',
-    view: 'Daily',
+    view: 'DAILY',
     submitted: false
 }
 
@@ -41,8 +41,14 @@ const reducer = (state = initialState, action) => {
                     weekly: action.text
                 }
             }
+        case 'SUBMIT_FORM':
+            return {
+                ...state,
+                submitted: true
+            }
         default:
             return state;
     }
 }
+
 export default reducer;
