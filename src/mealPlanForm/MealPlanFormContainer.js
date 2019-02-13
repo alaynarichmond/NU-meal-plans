@@ -6,7 +6,7 @@ import { setMealPlan,
     setWeekdayMeals,
     setWeekendMeals,
     setWeeklyMeals
-} from './mealPlanFormActions';
+} from './actions';
 
 const mapStateToProps = state => ({
     mealPlan: state.mealPlanForm.mealPlan,

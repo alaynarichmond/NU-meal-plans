@@ -1,0 +1,1 @@
+export const storeResults = (mealsPerWeek, avgPrice) => ({type: 'STORE_RESULTS', mealsPerWeek, avgPrice})
