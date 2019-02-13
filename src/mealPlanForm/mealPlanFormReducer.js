@@ -1,7 +1,10 @@
-
 const initialState = {
     mealPlan: 'OPEN_ACCESS',
     view: 'DAILY',
+    mealsEaten: {
+        weekday: 3,
+        weekend: 1
+    },
     submitted: false
 }
 
@@ -22,7 +25,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 mealsEaten: {
                     ...state.mealsEaten,
-                    weekday: action.text
+                    weekday: Number(action.text)
                 }
             }
         case 'SET_WEEKEND_MEALS':
@@ -30,7 +33,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 mealsEaten: {
                     ...state.mealsEaten,
-                    weekend: action.text
+                    weekend: Number(action.text)
                 }
             }
         case 'SET_WEEKLY_MEALS':
@@ -38,7 +41,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 mealsEaten: {
                     ...state.mealsEaten,
-                    weekly: action.text
+                    weekly: Number(action.text)
                 }
             }
         case 'SUBMIT_FORM':
